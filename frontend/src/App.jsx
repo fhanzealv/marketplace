@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
     <Navbar />
-    <div className='flex gap-5'>
+    <div className='flex h-[calc(100vh-75px)] overflow-hidden '>
       <Sidebar />
       <Content />
     </div>

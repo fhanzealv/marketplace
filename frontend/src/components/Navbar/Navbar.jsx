@@ -27,7 +27,7 @@ const Navbar = () => {
             <nav className='search__bar w-[40rem] h-10 left-0 flex  items-center border rounded-full relative overflow-hidden' >
                     <p className='px-4'>
 
-                    search Here
+                    search
                     </p>
                     <button className='flex justify-center items-center w-16 h-full bg-slate-200 right-0 absolute '>
                     <FontAwesomeIcon icon={faSearch} className=' iconn' />
