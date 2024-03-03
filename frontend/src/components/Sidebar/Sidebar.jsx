@@ -9,9 +9,9 @@ const Sidebar = () => {
     <>
 
     
-    <div className='sidebar overflow-hidden bg-white h-[calc(100vh-65px)] relative flex flex-col justify-between'>
+    <div className='sidebar overflow-hidden bg-white h-[calc(100vh-75px)] relative flex flex-col justify-between'>
                 
-    <div className='' id='sideLinks' >
+    <div className='side__nav' id='sideLinks' >
 
                 <button className='flex gap-4 py-2 hover:bg-blue-400 w-full'>
                 <div className='logo relative px-3'>
