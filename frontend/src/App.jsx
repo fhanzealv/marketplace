@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-import Nav__left from './components/Nav__left/Nav__left'
 import Home from './pages/Home/Home'
+import Sidebar from './components/Sidebar/Sidebar'
 
 const App = () => {
   return (
     <>
     <Navbar />
-    <div className='flex'>
-      <Nav__left />
+    <div className='flex gap-5'>
+      <Sidebar />
       <Home />
     </div>
     </>
