@@ -27,11 +27,8 @@ const Navbar = () => {
 
                 <div className='brands px-6'>Fmarket</div>
             </nav>
-            <nav className='search__bar w-[40rem] h-10 left-0 flex  items-center border rounded-full relative overflow-hidden' >
-                    <p className='px-4'>
-
-                    search
-                    </p>
+            <nav className='search__bar w-[40rem] h-10 left-0 flex  items-center border rounded-full relative overflow-hidden px-4' >
+                   <input type='search' placeholder='search' className='w-full border-none h-full ' />
                     <button className='flex justify-center items-center w-16 h-full bg-slate-200 right-0 absolute '>
                     <FontAwesomeIcon icon={faSearch} className=' iconn' />
                     </button>

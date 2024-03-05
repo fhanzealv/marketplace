@@ -20,7 +20,8 @@ const Sidebar = () => {
       <Link to='/trending'><li onClick={() => {setMenu('trending')}} className={`side__links ${menu === "trending" ? "side-active" : ""}` }><FontAwesomeIcon icon={faStar} className='w-12' /><span className='text__links'>Trending</span>
             </li></Link>
                 
-
+      <Link to='/mens'><li onClick={() => {setMenu('mens')}} className={`side__links ${menu === "mens" ? "side-active" : ""}` }><FontAwesomeIcon icon={faStar} className='w-12' /><span className='text__links'>Trending</span>
+            </li></Link>
 
                 {/* <button className='flex  py-2 hover:bg-blue-400 w-full'>
                 <div className='logo relative px-3 '>

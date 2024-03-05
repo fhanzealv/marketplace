@@ -2,6 +2,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Test from '../../assets/DLfhanze.png'
+import all_product from '../../AssetsEcom/all_product'
 
 const Content = () => {
   return (
@@ -12,13 +13,17 @@ const Content = () => {
           <div className='flex justify-center items-center w-8 h-8 border border-black rounded-full'>
           <FontAwesomeIcon icon={faArrowRight} className='' />
           </div>
-
         </div>
 
-      <div className='card__container gap-4 relative'>
+
+      <div className='card__container gap-4 relative' >
+     
+      {all_product.map((item,i) => {
+          return <>
+
         <div className='card  '>
           <div className="card-top relative">
-                   <img src={Test} className='object-cover bg-center'/>
+                   <img src={item.image} className='object-cover bg-center'/>
           </div>
           <div className='card-bottom relative py-4'>
             <a href='' className='hover:text-blue-300'>
@@ -26,17 +31,16 @@ const Content = () => {
           <div className='flex items-center gap-1'>
             <h2 className='text-xl font-semibold'>
 
-            Diamond Lock
+            {item.name}
             </h2>
             <span className='border rounded-md bg-green-300 p-1 text-white font-semibold  '>Status: Ready</span>
             </div>
-          <div className='card__desc mb-4 '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, officia! Ab laborum sed blanditiis aliquid. Iure quasi repudiandae velit, obcaecati veritatis eum? Voluptatibus ea, deleniti autem molestiae dolorum ipsa vero?</div>
+ <p className='card__desc mb-4 '>{item.name}</p>
        
           </a>
           </div>
         </div>
-
-        <div className='card  '>
+        {/* <div className='card  '>
           <div className="card-top relative">
                    <img src='../../src/assets/download.jpeg' className='object-cover bg-center w-full'/>
           </div>
@@ -207,8 +211,10 @@ const Content = () => {
           </div>
         </div>
       
+      </div> */}
+    </>
+    })}
       </div>
-
     </section>
   )
 }
