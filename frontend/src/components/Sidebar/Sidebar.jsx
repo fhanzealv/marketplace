@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faFire, faHouse, faStar } from '@fortawesome/free-solid-svg-icons'
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -13,10 +14,11 @@ const Sidebar = () => {
     <div className='sidebar overflow-hidden bg-white  relative flex flex-col justify-between'>
                 
     <ul className='side__nav' id='side__nav' >
-      <li onClick={() => {setMenu('featured')}}  className={`side__links ${menu === "featured" ? "side-active" : ""}` }><FontAwesomeIcon icon={faFire} className='w-12' /><span className='text__links'>
-            Featured</span></li>
-      <li onClick={() => {setMenu('trending')}} className={`side__links ${menu === "trending" ? "side-active" : ""}` }><FontAwesomeIcon icon={faStar} className='w-12' /><span className='text__links'>
-            Trending</span></li>
+      <Link to='/'><li onClick={() => {setMenu('featured')}}  className={`side__links ${menu === "featured" ? "side-active" : ""}` }><FontAwesomeIcon icon={faFire} className='w-12' />
+      <span className='text__links'>Featured</span></li></Link>
+
+      <Link to='/trending'><li onClick={() => {setMenu('trending')}} className={`side__links ${menu === "trending" ? "side-active" : ""}` }><FontAwesomeIcon icon={faStar} className='w-12' /><span className='text__links'>Trending</span>
+            </li></Link>
                 
 
 
