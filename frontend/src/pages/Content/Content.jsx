@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Test from '../../assets/DLfhanze.png'
 import all_product from '../../AssetsEcom/all_product'
+import { Link } from 'react-router-dom'
 
 const Content = () => {
   return (
@@ -20,7 +21,7 @@ const Content = () => {
      
       {all_product.map((item,i) => {
           return <>
-
+ <Link to={`/product/${item.id}`}>
         <div className='card  '>
           <div className="card-top relative">
                    <img src={item.image} className='object-cover bg-center'/>
@@ -40,6 +41,7 @@ const Content = () => {
           </a>
           </div>
         </div>
+        </Link>
         {/* <div className='card  '>
           <div className="card-top relative">
                    <img src='../../src/assets/download.jpeg' className='object-cover bg-center w-full'/>

@@ -18,7 +18,7 @@ const Popular = () => {
         <div className="popular-item card__container">
             {data_product.map((item,i) =>{
                 return <>
-                <Item key={i} id={item.id} name={item.name} img={item.image} new_price={item.new_price} old_price={item.old_price}/>
+                <Item key={item.id} id={item.id} name={item.name} img={item.image} new_price={item.new_price} old_price={item.old_price}/>
                 
                 </>
             } )}

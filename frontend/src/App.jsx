@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Trending from './pages/Trending/Trending'
 import Popular from './components/Popular/Popular'
 import ShopCategory from './pages/ShopCategory/ShopCategory'
+import Product from './pages/Product/Product'
 
 const App = () => {
   return (
@@ -19,9 +20,9 @@ const App = () => {
           <Route path='/' element={<Content /> } />
           <Route path='/trending' element={<Popular  />} />
           <Route path='/mens' element={<ShopCategory category="men"/>}/>
-          {/* <Route path='/product' element={<Product />}>
-            <Route path=':productID' element={<Product />} />
-          </Route> */}
+          <Route path='/product' element={<Product />}>
+            <Route path=':productId' element={<Product />} />
+          </Route>
         </Routes>
       </Router>
     </div>
