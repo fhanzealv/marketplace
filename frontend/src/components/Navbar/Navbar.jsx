@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faCircleUser, faSearch, faSliders } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import Cart from '../../assets/cat.png'
-
+import { Link } from 'react-router-dom'
 const Navbar = () => {
 
    const navActive = () => {
@@ -55,9 +55,9 @@ const Navbar = () => {
 
                 </div> */}
 
-                <div className='nav-login-cart'>
+                <div className='nav-login-cart mr-8'>
                     <button>Login</button>
-                    <img src={Cart} alt='' className='w-12 h-12'/>
+                   <Link to='/cart'> <img src={Cart} alt='' className='w-12 h-12' /></Link>
                     <div className="nav-cart-count">0</div>
                 </div>
             </nav>

@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faFire, faHouse, faStar } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom';
 
+import Cart from '../../assets/cat.png'
+
 
 const Sidebar = () => {
   const [menu, setMenu] = useState("featured");
@@ -22,7 +24,6 @@ const Sidebar = () => {
                 
       <Link to='/mens'><li onClick={() => {setMenu('mens')}} className={`side__links ${menu === "mens" ? "side-active" : ""}` }><FontAwesomeIcon icon={faStar} className='w-12' /><span className='text__links'>Trending</span>
             </li></Link>
-
                 {/* <button className='flex  py-2 hover:bg-blue-400 w-full'>
                 <div className='logo relative px-3 '>
                 <FontAwesomeIcon icon={faFire} className='w-12' />
