@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
     <Navbar />
-    <div className='flex h-[calc(100vh-75px)] overflow-hidden '>
+    <div className='flex h-[calc(100vh-91px)] overflow-hidden '>
       <Sidebar />
       <Content />
     </div>

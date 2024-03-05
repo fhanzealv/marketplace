@@ -6,9 +6,7 @@ body{
   @apply bg-slate-100;
 }
 
-.side__nav{
-  transition: all 1s linear;
-}
+
 
 .card__container{
   display:grid;
@@ -41,3 +39,81 @@ body{
 .iconn{
   z-index:2;
 }
+
+
+.card{
+  @apply py-2;
+}
+.card__desc{
+  @apply h-20 overflow-hidden;
+}
+
+
+.nav-login-cart{
+  @apply gap-4;
+  display:flex;
+  align-items: center;
+  
+  
+}
+.nav-login-cart button{
+  @apply w-28 h-10 border border-blue-300 rounded-md text-slate-600;
+}
+
+
+.nav-login-cart button:active{
+  @apply bg-green-300;
+  
+}
+
+.nav-login-cart img{
+  @apply mr-[45px];
+}
+.nav-cart-count{
+  @apply ml-[-75px] mt-[-35px] text-white;
+  width: 22px;
+  height: 22px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  /* margin-top: -35px;
+  margin-left: -55px; */
+  border-radius: 11px;
+  font-size:14px;
+  background: red;
+}
+
+
+.side__nav{
+  transition: all 0.3s linear;
+
+  @apply w-72 ;
+}
+
+.side__nav-active{
+  @apply w-20;
+}
+.side__nav li{
+  @apply cursor-pointer;  
+}
+
+.side__links{
+    @apply px-3 py-2;
+
+}
+
+.side-active{
+  @apply bg-blue-300 text-white font-semibold border-b-2 border-green-300;
+}
+
+
+.text__links{
+  @apply opacity-100;
+  transition: all 0.7s ease;
+}
+
+.text__links-active{
+  @apply opacity-0;
+  transition: all 0.2s ease;
+
+  }

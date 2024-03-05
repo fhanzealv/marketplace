@@ -3,16 +3,19 @@ import Nav__left from '../Sidebar/Sidebar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faCircleUser, faSearch, faSliders } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import Cart from '../../assets/cat.png'
 
 const Navbar = () => {
 
    const navActive = () => {
-        const sideLinks = document.querySelectorAll('.side__links');
-        const sideFoot = document.querySelector('.side__footer')
+        const sideLinks = document.querySelectorAll('.text__links');
+        const sideFoot = document.querySelector('.side__footer');
+        const sideNav = document.querySelector('.side__nav');
         sideLinks.forEach( (e) => {
-            e.classList.toggle('hidden');
+            e.classList.toggle('text__links-active');
         });
-        sideFoot.classList.toggle('hidden');
+      
+        sideNav.classList.toggle('side__nav-active')
     }
 
   return (
@@ -21,8 +24,8 @@ const Navbar = () => {
         <nav className='navbar flex justify-between items-center gap-5 '>
             <nav className='nav__left flex items-center gap-4 w-[20rem] '>
                 <button className='hamburger'><FontAwesomeIcon icon={faBars} className='h-6 w-12' onClick={navActive}/></button>
-                <div className='brands '>Fmarket</div>
 
+                <div className='brands px-6'>Fmarket</div>
             </nav>
             <nav className='search__bar w-[40rem] h-10 left-0 flex  items-center border rounded-full relative overflow-hidden' >
                     <p className='px-4'>
@@ -41,16 +44,24 @@ const Navbar = () => {
 
                 </div>
 
-                <div className='nav__links flex items-center gap-4 '>
+                {/* <div className='nav__links flex items-center gap-4 '>
                     <button className=''>
                         <FontAwesomeIcon icon={faSliders} />
                     </button>
+
+
                     <button className=''>
                         <FontAwesomeIcon icon={faCartShopping} />
                     </button>
                   
                     <div className=''><FontAwesomeIcon icon={faCircleUser} className='h-7' /></div>
 
+                </div> */}
+
+                <div className='nav-login-cart'>
+                    <button>Login</button>
+                    <img src={Cart} alt='' className='w-12 h-12'/>
+                    <div className="nav-cart-count">0</div>
                 </div>
             </nav>
         </nav>
